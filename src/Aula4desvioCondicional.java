@@ -7,7 +7,9 @@ public class Aula4desvioCondicional {
 		//exercicio2();
 		//exercicio3();
 		//exercicio4();
-		exercicio5();
+		//exercicio5();
+		//exercicio6();
+		exercicio7();
 	}
 
 	static void exercicio1() {
@@ -90,8 +92,40 @@ public class Aula4desvioCondicional {
 		}	
 	}
 	
-	
-	
-	
-	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio6() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o primeiro número: ");      //NAO SEI
+		String num = res.nextLine();
+		double numero1 = Double.parseDouble(num);
+		
+		System.out.print("Digite o segundo número: ");		//NAO SEI
+		String num2 = res.nextLine();
+		double numero2 = Double.parseDouble(num2);
+		
+		System.out.print("Digite o terceiro número: ");  	//NAO SEI
+		String num3 = res.nextLine();
+		double numero3 = Double.parseDouble(num3);
+		
+		double maior = numero1;
+	}
+		
+	static void exercicio7() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite sua nota: ");
+		String not = res.nextLine();
+		double nota = Double.parseDouble(not);
+		
+		if (nota <= 4) {
+			System.out.print("NOTA INSUFICIENTE!");
+		} else if(nota <= 6) {
+			System.out.print("NOTA REGULAR");
+		} else if (nota <= 8) {
+			System.out.print("NOTA BOA");
+		} else if (nota >= 9) {
+			System.out.print("NOTA EXCELENTE");
+		}
+		
+	}	
 }
