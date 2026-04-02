@@ -9,7 +9,16 @@ public class Aula4desvioCondicional {
 		//exercicio4();
 		//exercicio5();
 		//exercicio6();
-		exercicio7();
+		//exercicio7();
+		//exercicio8();
+		//exercicio9();
+		//exercicio10();
+		//exercicio11();
+		//exercicio12();
+		//exercicio13();
+		//exercicio14();
+		exercicio15();
+		
 	}
 
 	static void exercicio1() {
@@ -128,4 +137,185 @@ public class Aula4desvioCondicional {
 		}
 		
 	}	
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	static void exercicio8() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o tamanho primeiro lado: ");
+		String l1 = res.nextLine();
+		double lado1 = Double.parseDouble(l1);
+		
+		System.out.print("Digite o tamanho do segundo lado: ");
+		String l2 = res.nextLine();
+		double lado2 = Double.parseDouble(l2);
+		
+		System.out.print("Digite o tamanho do terceiro lado: ");
+		String l3 = res.nextLine();
+		double lado3 = Double.parseDouble(l3);
+		
+		if (lado1 + lado2 == lado3) {
+			System.out.print("Isso é um TRIÃNGULO!");
+		} else {
+			System.out.print("Não é um TRIÂNGULO!");
+		}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio9() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o tamanho primeiro lado: ");
+		String l1 = res.nextLine();
+		double lado1 = Double.parseDouble(l1);
+		
+		System.out.print("Digite o tamanho do segundo lado: ");
+		String l2 = res.nextLine();
+		double lado2 = Double.parseDouble(l2);
+		
+		System.out.print("Digite o tamanho do terceiro lado: ");
+		String l3 = res.nextLine();
+		double lado3 = Double.parseDouble(l3);
+		
+		if (lado1 == lado2 && lado2 == lado3) {
+			System.out.print("Isso é um triangulo EQUILÁTERO!");
+		} else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3){
+			System.out.print("Triângulo ISOSCELES!");
+		} else {
+			System.out.print("O triângulo é ESCALENO!");
+		}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio10() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o nome de USUARIO: ");
+		String usuario = res.nextLine();
+		
+		System.out.print("Digite sua SENHA: ");
+		String senha = res.nextLine();
+		
+		String usuarioC = "Diogo";
+		String senhaC = "diogo123";
+		
+		if (usuario.equals(usuarioC) && senha.equals(senhaC)) {
+			System.out.print("Login efetuado!");
+		} else {
+			System.out.print("Sua senha ou usuário estão incorretos!");
+		}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	static void exercicio11() {
+		System.out.print("ANO BISSEXTO OU NÃO" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite qual o ano: ");
+		String ano = res.nextLine();
+		int anoR = Integer.parseInt(ano);
+		
+		if (anoR % 4 == 0 && anoR % 100 != 0 || anoR % 400 == 0){
+			System.out.print("O ano é bissexto!");
+		} else {
+			System.out.print("O ano não é bissexto!");
+		}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio12() {
+		System.out.print("CALCULADORA SIMPLES" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o primeiro numero: ");
+		String num = res.nextLine();
+		double numero = Double.parseDouble(num);
+		
+		System.out.print("Digite o segundo numero: ");
+		String num2 = res.nextLine();
+		double numero2 = Double.parseDouble(num2);
+		
+		System.out.print("Qual operação você quer + - * /: ");
+		String op = res.nextLine();
+		
+		double multiplicacao = numero * numero2;
+		double divisao = numero / numero2;
+		double subtracao = numero - numero2;
+		double adicao = numero + numero2;
+		
+		if (op.equals("-")) {
+			System.out.print("A subtração do seus numero é: "+subtracao);
+		} else if (op.equals("/")) {
+			System.out.print("A divisão do seus numero é: "+divisao);
+		}else if (op.equals("*")) {
+			System.out.print("A subtração do seus numero é: "+multiplicacao);
+		}else if (op.equals("+")) {
+			System.out.print("A subtração do seus numero é: "+adicao);
+		}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	static void exercicio13() {
+		System.out.print("CALCULO IMPOSTO DE RENDA" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite qual o seu salario: ");
+		String sal = res.nextLine();
+		double salario = Double.parseDouble(sal);
+		
+		double imposto = 0.15;
+		double total = salario * imposto;
+		
+		System.out.print("Seu imposto vai ser de: " + total + "Reais");
+	
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+	static void exercicio14() {
+		System.out.print("CALCULO DESCONTO PROGRESSIVO" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite qual o valor da compra: ");
+		String val = res.nextLine();
+		double valor = Double.parseDouble(val);
+		
+		double dez = valor * 0.10;
+		double vinte = valor * 0.20;
+		
+		if (valor <= 100) {
+			System.out.print("Sem desconto!");
+		} else if (valor <= 499 ) {
+			System.out.print("Desconto de 10%!" + dez);
+		} else if (valor >= 500 ) {
+			System.out.print("Desconto de 20%!" + vinte);
+	}
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio15() {
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite sua idade: ");
+		String age = res.nextLine();
+		double idade = Double.parseDouble(age);
+		
+		if (idade <= 12) {
+			System.out.print("CRIANÇA");
+		} else if(idade <= 17) {
+			System.out.print("ADOLECESCENTE");
+		} else if (idade <= 59) {
+			System.out.print("ADULTO");
+		} else if (idade <= 60) {
+			System.out.print("IDOSO");
+		}
+		
+	}	
+	
+	
+	
+	
+	
+	
+	
 }
