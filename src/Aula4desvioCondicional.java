@@ -17,7 +17,12 @@ public class Aula4desvioCondicional {
 		//exercicio12();
 		//exercicio13();
 		//exercicio14();
-		exercicio15();
+		//exercicio15();
+		//exercicio16();
+		//exercicio17();
+		//exercicio18();
+		//exercicio19();
+		exercicio20();
 		
 	}
 
@@ -312,10 +317,124 @@ public class Aula4desvioCondicional {
 		
 	}	
 	
+	static void exercicio16() {
+		System.out.print("MEDIA APROVADO OU REPROVADO" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite sua primeira nota: ");
+		String nota1 = res.nextLine();
+		double n1 = Double.parseDouble(nota1);
+		
+		System.out.print("Digite sua segunda nota: ");
+		String nota2 = res.nextLine();
+		double n2 = Double.parseDouble(nota2);
+		
+		System.out.print("Digite sua terceira nota: ");
+		String nota3 = res.nextLine();
+		double n3 = Double.parseDouble(nota3);
+		
+		double media = (n1 + n2 + n3)/3;
+		
+		if (media < 7) {
+			System.out.print("Aluno reprovado até uma recuperção!");
+		} else {
+			System.out.print("Aluno aprovado!");
+		}
+		
+	}
 	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio17() {
+		System.out.print("EMPRESTIMO" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite o valor do empréstimo: ");
+		Double emp = res.nextDouble();
+		
+		System.out.print("Digite o valor do seu salário: ");
+		Double sal = res.nextDouble();
+		
+		double pag = (sal * 0.30)*24;
+		
+		if (pag >= emp) {
+			System.out.print("Empréstimo aceito!");
+		} else {
+			System.out.print("Empréstimo recusado!");
+		}
+		
+
+		
+	}
 	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio18() {
+		System.out.print("ADIVINHAÇÃO" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Digite um número de 1 a 10: ");
+		int palp = res.nextInt();
+		
+		double sec = 5;
+		
+		if (palp > sec) {
+			System.out.print("Menor");
+		}  else if (palp < sec) {
+			System.out.print("Maior");
+		} else {
+			System.out.print("ACERTOU!");
+		}
+		
+		
+	}
 	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio19() {
+		System.out.print("IMC - INDICE MASSA CORPORAL" + "\n" + "\n" );
+		Scanner res = new Scanner(System.in);
+		System.out.print("Seu peso: ");
+		double peso = res.nextDouble();
+		
+		System.out.print("Sua altura: ");
+		double altura = res.nextDouble();
+		
+		double imc = peso / (altura * altura);
+		
+		if (imc < 18.5) {
+		    System.out.print("Abaixo do peso");
+		} else if (imc < 25) {
+		    System.out.print("Peso normal");
+		} else if (imc < 30) {
+		    System.out.print("Sobrepeso");
+		} else {
+		    System.out.print("Obesidade");
+		}
+	}
 	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	static void exercicio20() {
+		Scanner res = new Scanner(System.in);
+		
+		String usuarioC = "Diogo";
+		String senhaC = "diogo123";
+		
+		int tentativas = 0;
+		
+		while (tentativas < 3) {
+			System.out.print("Digite o nome de USUARIO: ");
+			String usuario = res.nextLine();
+			System.out.print("Digite sua SENHA: ");
+			String senha = res.nextLine();
+			
+			if (usuario.equals(usuarioC) && senha.equals(senhaC)) {
+				System.out.print("Login efetuado!");
+				return;
+			} else {
+				tentativas ++;
+				System.out.println("Dados incorretos - TENTIVAS: "+ (3 - tentativas));
+			} 
+		}
+	}
 	
 	
 }
